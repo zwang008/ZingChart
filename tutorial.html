@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Hello ZingChart</title>
+  </head>
+
+  <body>
+    <div id = "myChartDiv"></div>
+
+    <script src="html5_scripts/zingchart-html5-min.js"></script>
+    <script>
+      var myChart = {
+        type: "line",
+        title: {text: "Hello ZingChart World!"},
+        series: [
+          {values: [5, 10, 15, 5, 10, 5]},
+          {values: [2, 4, 6, 8, 10, 12]}
+        ]
+      };
+
+      zingchart.render({
+        id: "myChartDiv",
+        height: 350,
+        width: 500,
+        data: myChart
+      });
+    </script>
+  </body>
+</html>
